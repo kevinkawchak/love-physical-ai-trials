@@ -1,0 +1,55 @@
+% tmpl20style.sty - paper/report style (single column, Linux Libertine body, accent headings).
+% Rebuilt for output-03 from papers/VVUQ-03/final-paper/new_paper.sty conventions.
+\NeedsTeXFormat{LaTeX2e}\ProcessOptions\relax
+\usepackage{libertine}\renewcommand{\sfdefault}{phv}
+\usepackage[letterpaper]{geometry}
+\AtBeginDocument{\newgeometry{textheight=9in,textwidth=6.4in,top=1in,headheight=15pt,headsep=18pt,footskip=30pt}}
+\usepackage{xcolor}\definecolor{accentcol}{HTML}{8B2E3F}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{textcomp}
+\usepackage{array}\usepackage{booktabs}\usepackage{tabularx}\usepackage{ragged2e}
+\usepackage{needspace}\usepackage{enumitem}\usepackage{graphicx}
+\usepackage{float}\usepackage{caption}\usepackage{fancyvrb}
+\widowpenalty=10000 \clubpenalty=10000 \brokenpenalty=10000 \flushbottom \sloppy \emergencystretch=3em \tolerance=2000
+\newcommand{\shorttitle}{Adverse Event SOP}
+\usepackage{fancyhdr}\fancyhf{}\pagestyle{fancy}\renewcommand{\headrulewidth}{0.3pt}
+\rhead{\small\color{accentcol}\thepage}\lhead{\footnotesize\itshape\color{accentcol}Adverse Event SOP}
+% Left-aligned ragged-right fixed-width columns and a flexible Y column, so the
+% one table template matches the body measure with no large inter-word gaps.
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\renewcommand{\section}{\@startsection{section}{1}{\z@}{-2.2ex \@plus -0.5ex}{1.3ex}%
+  {\large\bfseries\sffamily\color{accentcol}\raggedright}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}{-1.5ex \@plus -0.4ex}{0.5ex}%
+  {\normalsize\bfseries\sffamily\color{accentcol}\raggedright}}
+\setlength{\parindent}{\z@}\setlength{\parskip}{5.2\p@}
+\renewcommand{\maketitle}{\par\begingroup\thispagestyle{empty}\@maketitle\endgroup\let\maketitle\relax}
+\renewcommand{\@maketitle}{\vbox{\hsize\textwidth\linewidth\hsize \vskip 0.1in
+  {\color{accentcol}\rule{\textwidth}{3pt}}\vskip 0.14in
+  \raggedright {\LARGE\bfseries\sffamily\color{accentcol}\@title\par}\vskip 0.18in
+  {\large\@author}\vskip 0.08in {\small\@date}\vskip 0.16in
+  {\color{accentcol}\rule{\textwidth}{1pt}}\vskip 0.1in}}
+\renewenvironment{abstract}{\par\noindent\colorbox{accentcol!8}{\parbox{\dimexpr\textwidth-2\fboxsep}{%
+  {\bfseries\color{accentcol} Abstract.}\quad}}\par\vskip 0.3em\begin{quote}}{\end{quote}}
+
+% Green ORCID logo. orcid_icon.png ships with every template, so \orcidicon is
+% defined unconditionally; a guarded \IfFileExists wrapper would place #1 inside a
+% kernel argument scan and break. Adapted from papers/VVUQ-02/final-paper/main.tex.
+\newcommand{\orcidicon}[1]{%
+  \href{https://orcid.org/#1}{\raisebox{-1pt}{\includegraphics[height=9pt]{orcid_icon.png}}}}
+
+% Keywords: a blank single line for the author to fill in (separate with |).
+\providecommand{\keywordname}{\textbf{Keywords}}
+\providecommand{\keywords}[1]{\par\addvspace{\medskipamount}%
+  {\setlength{\parindent}{0pt}\keywordname\enspace #1\par}}
+
+% Selectable back-matter heading (used by section files that carry back matter).
+\providecommand{\bmhead}[1]{\par\addvspace{0.5\baselineskip}\needspace{2\baselineskip}%
+  \phantomsection\addcontentsline{toc}{section}{#1}{\noindent\bfseries\color{accentcol}#1}\par\addvspace{2pt}}
+% Font-independent empty checkbox (avoids amssymb, which conflicts with kpfonts).
+\providecommand{\cboxx}{\raisebox{0.12ex}{\framebox[1.25ex]{\rule{0pt}{0.95ex}}}}
+
+
+\usepackage[hidelinks]{hyperref}\usepackage{url}
+\captionsetup{font=small,labelfont=bf,justification=raggedright,singlelinecheck=false}
+\endinput
