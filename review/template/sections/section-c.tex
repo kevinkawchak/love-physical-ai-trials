@@ -1,0 +1,22 @@
+\section{Procedure}
+\label{sec:c}
+
+The response is a timed sequence.
+
+\begin{enumerate}[leftmargin=2.0em,itemsep=3pt]
+\item \textbf{Detect.}\quad the gate or a clinician flags the event and the robot enters a safe state
+\item \textbf{Stabilize.}\quad the Assist role executes the immediate action within the contact-force budget
+\item \textbf{Escalate.}\quad the Lead returns the interaction to a qualified human if the gate ESCALATES
+\item \textbf{Report.}\quad the Reserve role files the adverse-event record within the required window
+\end{enumerate}
+
+% One image placeholder, based on the figure float code of papers/VVUQ-02/final-paper.
+% Drop a real PNG into Images/ and swap the framed box for \includegraphics.
+\begin{figure}[H]
+  \centering
+  % \includegraphics[width=1.0\linewidth, trim={0 0 0 0}, clip]{Images/response-swimlane.png}
+  \fbox{\begin{minipage}[c][0.26\linewidth][c]{0.82\linewidth}\centering\itshape
+  Figure placeholder (\texttt{Images/response-swimlane.png}). The float, caption, and \texttt{\textbackslash label}
+  mirror the VVUQ-02 figures; replace the box with \texttt{\textbackslash includegraphics}.\end{minipage}}
+  \caption{Figure 1. Placeholder swimlane of the timed adverse-event response.}\label{fig:swimlane}
+\end{figure}
