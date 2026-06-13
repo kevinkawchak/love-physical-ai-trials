@@ -33,7 +33,7 @@ mechanism at a glance.
 \draw[nfedge] (d) to[out=-120,in=60] (acc.north);
 \draw[nfedge] (d) -- (esc.north);
 \draw[nfedge] (d) to[out=-60,in=120] (blk.north);
-\draw[nfedged] (esc) to[out=150,in=-90] (b.south);
+\draw[nfedged] (esc.south) to[out=-90,in=-90,looseness=1.2] (b.south);
 \end{narrativefig}
 \vspace{-0.15cm}
 \figcaption{Figure 1. Verification before generation (Mermaid 01 reproduced as
