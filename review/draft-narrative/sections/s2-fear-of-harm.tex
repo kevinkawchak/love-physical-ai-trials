@@ -1,0 +1,34 @@
+\section{Fear of preventable harm: the errors we can no longer accept}
+\label{sec:fear}
+
+The second appeal is the fear of harm that did not have to happen. Missed
+diagnoses, medication errors, unsafe devices, and delayed treatment have driven
+drug-safety regulation, device oversight, and electronic health record
+requirements for a generation. The underlying message is simple: without this
+law, more people will suffer than need to.
+
+[DRAFTING INSTRUCTIONS: in the full-narrative, anchor the fear appeal in the two
+strongest credible sources in \texttt{review/references/narrative\_refs.bib}:
+\texttt{kohn2000toerr} (To Err Is Human) and \texttt{makary2016medical} (medical
+error as a leading cause of death). Contrast the legacy chain of manual handoffs
+with the verified path using
+\texttt{cancer-automated/papers/VVUQ-02} (each gate catches a defect where it
+occurs). Reproduce Mermaid figures
+\texttt{review/mermaid/diagrams/04-compounding-human-error.md} and
+\texttt{20-patient-throughput-flow.md} as colored TikZ. Use the KEY TERM
+\texttt{markup} to note where committee debate would harden the safety language.]
+
+\begin{narrativefig}
+\node[nfrisk] (a) at (0,0) {Manual handoff};
+\node[nfrisk] (b) at (3.4,0) {Error compounds};
+\node[nfdec] (c) at (7.0,0) {Gate};
+\node[nfhope] (d) at (10.2,0) {Contained};
+\draw[nfedge] (a)--(b); \draw[nfedge] (b)--(c); \draw[nfedge] (c)--(d);
+\end{narrativefig}
+\vspace{-0.2cm}
+\figcaption{Figure 3. Compounding error versus a contained defect (placeholder;
+expanded from Mermaid 04 in the full-narrative).}
+
+A bill cannot promise that nothing will ever go wrong. It can promise that the
+system checks itself at every step, so the same mistake is not made twice and is
+not made invisibly.
