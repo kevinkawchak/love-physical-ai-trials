@@ -1,0 +1,60 @@
+\section{Protection of vulnerable people: a duty of care, written down}
+\label{sec:protection}
+
+The sixth appeal is protective rather than purely compassionate. Health debates
+return again and again to the groups most exposed to harm: children, the elderly,
+disabled patients, veterans, and rural communities. For medical AI the specific
+worries are bias against minority populations, errors that fall hardest on the
+vulnerable, and consent that is assumed rather than confirmed. The same bias that
+the previous section measured falls most heavily on the people least able to
+absorb it \cite{obermeyer2019dissecting}, which is why a national action plan for
+AI as a medical device places real-world performance monitoring across subgroups
+at its center \cite{fda2021samd}.
+
+Protection is strongest when it is built into the procedure rather than promised
+afterward. The author's site-documentation and consent work, including an adaption
+of 21 CFR Part 50 for end-to-end Physical AI trials, makes informed consent a
+verified, logged step rather than a signature gathered in haste
+\cite{Kawchak2026PhysicalAIOncologyClinical, Kawchak2026Adaption21CFRPartb}.
+\autoref{fig:protection} shows the three gates a subgroup passes before its
+results are accepted.
+
+\begin{narrativefig}
+\node[nfone] (a) at (0,0) {Subgroup data};
+\node[nfdec] (b) at (3.4,0) {Bias parity};
+\node[nfdec] (c) at (6.8,0) {Consent verified};
+\node[nfdec] (d) at (10.2,0) {Outcome audit};
+\node[nfact] (e) at (8.5,-2.1) {Accepted with report};
+\node[nfrisk] (f) at (4.0,-2.1) {Held for human review};
+\draw[nfedge] (a)--(b); \draw[nfedge] (b)--(c); \draw[nfedge] (c)--(d);
+\draw[nfedge] (d) to[out=-90,in=0] (e.east);
+\draw[nfedged] (b) to[out=-90,in=90] (f.north);
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 8. Safeguards written into the procedure (Mermaid 15 as colored
+TikZ): parity, consent, and audit each guard the accept, or hold the work for a
+human.}
+
+\autoref{tab:protection} lists each protected group, its specific risk, and the
+safeguard that answers it.
+
+\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{3.0cm} Y L{4.0cm}@{}}
+\toprule
+\textbf{Group} & \textbf{Specific risk} & \textbf{Safeguard}\\
+\midrule
+Children & Too few cases for ordinary evidence & Subgroup audit and reporting\\
+Elderly and disabled & Models trained on others & Bias-parity surveillance\\
+Veterans & Fragmented records & Verified, auditable record\\
+Rural communities & Distance and access gaps & Portable, standardized platform\\
+\bottomrule
+\end{tabularx}
+\caption{Table 6. Protected groups, their risks, and the bill safeguards.}
+\label{tab:protection}
+\end{table}
+
+Protection that is written into statute, measured, and reported is stronger than
+protection that depends on the good intentions of whoever happens to be on duty.
+The quiet question is gentle but firm. If we can guarantee the check in law, why
+would we leave the most vulnerable patients relying on hope alone?
