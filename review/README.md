@@ -6,8 +6,9 @@
 [![Sections](https://img.shields.io/badge/Body%20sections-8%20emotional%20pillars-8B2E3F.svg)](.)
 [![Media](https://img.shields.io/badge/Media-Tables%20%2B%20ASCII%20%2B%20colored%20Mermaid-lightgrey.svg)](.)
 [![Agent](https://img.shields.io/badge/Agent-Claude%20Code%20Opus%204.8%20(1M)-D08770.svg)](.)
+[![Bill DOI](https://img.shields.io/badge/Bill%20DOI-10.5281%2Fzenodo.20619762-EBCB8B.svg)](https://doi.org/10.5281/zenodo.20619762)
 
-This directory holds the entire narrative review that supports the transition of
+[Publication PDF](https://doi.org/10.5281/zenodo.20685379). This directory holds the entire narrative review that supports the transition of
 Physical AI Trial Bill **H. R. 9510 v5.0** into a new Federal AI law. The review
 is a single, growing manuscript written for legislators in medical AI who have
 neither robotics experience nor Claude Code and Codex application experience. It
