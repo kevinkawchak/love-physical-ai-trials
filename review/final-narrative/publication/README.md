@@ -5,8 +5,10 @@
 [![Figures](https://img.shields.io/badge/TikZ%20figures-20-D08770.svg)](sections/)
 [![Tables](https://img.shields.io/badge/Body--width%20tables-9-8B2E3F.svg)](sections/)
 [![Compiles](https://img.shields.io/badge/Overleaf-pdfLaTeX-8B2E3F.svg)](.)
+[![Review DOI](https://img.shields.io/badge/Review%20DOI-10.5281%2Fzenodo.20685379-D08770.svg)](https://doi.org/10.5281/zenodo.20685379)
 
-This directory is the output of **Stage 4** (sub-prompt
+
+[Publication PDF](https://doi.org/10.5281/zenodo.20685379). This directory is the output of **Stage 4** (sub-prompt
 [`../sub-prompts/prompt-4-final-narrative.md`](../sub-prompts/prompt-4-final-narrative.md)).
 The final-narrative carries the full-narrative to publication quality by
 implementing the corrections identified from the full stage. It is the
