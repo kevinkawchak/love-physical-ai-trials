@@ -1,0 +1,123 @@
+\section{Appendix A: figure compendium}
+\label{sec:appendix-figures}
+
+This appendix reproduces the remaining figures from the colored Mermaid catalog review/mermaid/, so the manuscript carries the full
+set of exhibits in the strict palette.  
+
+\begin{narrativefig}
+\node[nfone] (a) at (0,0) {Patient groups};
+\node[nfone] (b) at (0,-1.2) {Hospital networks};
+\node[nftwo] (c) at (0,-2.4) {Tech developers};
+\node[nfthree] (d) at (0,-3.6) {Medical boards};
+\node[nfact] (e) at (5.2,-1.8) {Congressional committee};
+\node[nfhope] (f) at (9.6,-1.8) {Enact H. R. 9510};
+
+\draw[nfedge] (a.east) to[out=0, in=180, looseness=0.8] (e.west);
+\draw[nfedge] (b.east) to[out=0, in=180, looseness=0.8] (e.west);
+\draw[nfedge] (c.east) to[out=0, in=180, looseness=0.8] (e.west);
+\draw[nfedge] (d.east) to[out=0, in=180, looseness=0.8] (e.west);
+\draw[nfedge] (e)--(f);
+\end{narrativefig}
+\vspace{-0.8cm}
+\figcaption{Figure 12. The coalition map: four constituencies
+converge on one committee.}
+
+\vspace{0.1cm}
+
+\begin{narrativefig}
+\node[nftwo] (s) at (0,0) {Trial sponsor}; \node[nfact] (h) at (4.4,0) {Secretary certifies};
+\node[nfhope] (c) at (9.0,0) {Congress and public};
+\draw[nfedge] (s)--(h); \draw[nfedge] (h)--(c);
+\draw[nfedged] (h) to[out=120,in=60, looseness=0.8] (s.north);
+\end{narrativefig}
+\vspace{-0.75cm}
+\figcaption{Figure 13. The annual reporting sequence: a verified
+record is certified, then reported, with a correction loop.}
+
+\vspace{0.1cm}
+
+\begin{narrativefig}
+\node[nfone] (d) at (0,0) {Detect}; \node[nfact] (v) at (4,0) {Verify}; \node[nfdec] (q) at (7.25,0) {Decision};
+\node[nfhope] (a) at (10.75,1.0) {ACCEPT}; \node[nfthree] (e) at (10.75,-0.2) {ESCALATE}; \node[nfrisk] (b) at (10.75,-1.4) {BLOCK};
+\draw[nfedge] (d)--(v); \draw[nfedge] (v)--(q);
+\draw[nfedge] (q)--(a); \draw[nfedge] (q)--(e); \draw[nfedge] (q)--(b);
+\draw[nfedged] (e) to[out=190,in=-40, looseness=0.8] (v.south);
+\end{narrativefig}
+\vspace{-0.75cm}
+\figcaption{Figure 14. The verification decision state machine: three
+guarded outcomes, with escalation returning for revision.}
+
+\vspace{0.1cm}
+
+\begin{narrativefig}
+\node[nfone] (a) at (0,0) {Foundations\\2024-2025}; \node[nftwo] (b) at (4.0,0) {Physical AI\\2025-2026};
+\node[nfthree] (c) at (8.0,0) {Bills\\v1.0-v5.0}; \node[nfact] (d) at (12,0) {Enactment};
+\draw[nfedge] (a)--(b); \draw[nfedge] (b)--(c); \draw[nfedge] (c)--(d);
+\end{narrativefig}
+\vspace{-0.75cm}
+\figcaption{Figure 15. The evidence-and-legislation timeline: four
+phases from research to enactment.}
+
+\begin{narrativefig}[scale=0.75, every node/.style={scale=0.75}]
+\draw[draw=black] (0,0) rectangle (9,6);
+\draw[draw=black,dashed] (4.5,0)--(4.5,6); \draw[draw=black,dashed] (0,3)--(9,3);
+\node[font=\scriptsize] at (4.5,-0.26) {effort};
+\node[font=\scriptsize,rotate=90] at (-0.26,3) {impact};
+\node[nfhope,text width=18mm,minimum height=7.5mm,align=center] at (2.25,5.1) {Testimony};
+\node[nfact,text width=18mm,minimum height=7.5mm,align=center] at (6.75,5.1) {Coalition};
+\node[nftwo,text width=21mm,minimum height=7.5mm,align=center] at (6.75,3.75) {Entrepreneur};
+\node[nfthree,text width=21mm,minimum height=7.5mm,align=center] at (6.0,2.1) {Reconcile};
+\node[nfone,text width=15mm,minimum height=7.5mm,align=center] at (2.25,1.8) {Grants};
+\end{narrativefig}
+\vspace{-0.49cm}
+\figcaption{Figure 16. Legislative actions by effort and impact:
+high-impact actions sit in the upper half.}
+
+\vspace{0.01cm}
+
+\begin{narrativefig}
+\node[nfperson] (p) at (0,0) {Patient}; \node[nfperson] (l) at (0,-2.0) {Legislator};
+\node[nftwo] (s) at (4.5,0) {Sponsor operations}; \node[nfdec] (g) at (8.5,0) {VVUQ gates};
+\node[nfhope] (r) at (8.5,-2.0) {Public registry};
+\draw[nfedge] (p)--(s); \draw[nfedge] (s)--(g); \draw[nfedge] (g)--(r); \draw[nfedge] (r)--(l);
+\draw[nfedge] (l) to[out=0,in=-120] (s.south);
+\end{narrativefig}
+\vspace{-0.55cm}
+\figcaption{Figure 17. System context: people and systems and how
+they relate around the verified platform.}
+
+\vspace{0.01cm}
+
+\begin{narrativefig}
+\node[nftwo] (a) at (0,0) {Authoring}; \node[nfact] (b) at (4.0,0) {Verification}; \node[nfthree] (c) at (8.0,0) {Oversight};
+\node[nfhope] (d) at (12,0) {Public record};
+\draw[nfedge] (a)--(b); \draw[nfedge] (b)--(c); \draw[nfedge] (c)--(d);
+\end{narrativefig}
+\vspace{-0.55cm}
+\figcaption{Figure 18. The composite oversight state machine: three
+super-states lead to a public record.}
+
+\vspace{0.01cm}
+
+\begin{narrativefig}
+\node[nfone] (w) at (0,0) {Witnesses}; \node[nfact] (k) at (4.2,0) {Committee}; \node[nftwo] (b) at (8.4,0) {Bill text};
+\draw[nfedge] (w)--(k); \draw[nfedge] (k)--(b);
+\draw[nfedged] (b) to[out=120,in=60, looseness=0.7] (k.north);
+\draw[nfedged] (k) to[out=150,in=30] (w.north);
+\end{narrativefig}
+\vspace{-0.55cm}
+\figcaption{Figure 19. Markup and testimony: testimony and amendment
+loops build the public record.}
+
+\vspace{0.01cm}
+
+\begin{narrativefig}
+\node[nfone] (c) at (0,0) {Patient cohort}; \node[nfrisk] (l) at (4.5,0.9) {Legacy path}; \node[nfact] (v) at (4.5,-0.9) {Verified path};
+\node[nfrisk] (h) at (8.9,0.9) {Preventable harm}; \node[nfhope] (g) at (8.9,-0.9) {Protected outcome};
+\draw[nfedge] (c)--(l); \draw[nfedge] (c)--(v);
+\draw[nfedge] (l)--(h); \draw[nfedge] (v)--(g);
+\draw[nfedge] (l) to[out=-40,in=150, looseness=0] (g.west);
+\end{narrativefig}
+\vspace{-0.55cm}
+\figcaption{Figure 20. Patient throughput: the verified path moves
+more of the cohort to a protected outcome.}
